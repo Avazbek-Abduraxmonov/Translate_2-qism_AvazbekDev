@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salom Sahifasi</title>
+</head>
+<body>
+    <h1>
+        Salom {{ism}}
+    </h1>
+    {% if ism == 'Avazbek' %}
+
+    <h2>Admin Sahifaga xush kelibsiz</h2>
+    {% else %}
+    <h2>Mehmon sahifaga xush kelibsiz</h2>
+    {% endif %}
+</body>
+</html>

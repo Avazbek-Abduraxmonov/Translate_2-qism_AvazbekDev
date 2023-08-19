@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eng to uzb Translate</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/semantic-ui/semantic.min.css' %}">
+</head>
+<body>
+    
+<!--     Bu sayt hali 100% emas -->
+
+    <div class="ui header segment">
+        <div class="ui container">
+            <h1 class="ui header">Online Translate</h1>
+            <div class="ui divider"></div>
+            <p>Tezlik, qulaylik, Sifat-Nazorat!</p>
+        </div>
+    </div>
+
+    <div class="ui container">
+        <div class="ui placeholder segment">
+            <div class="ui icon header">
+                Inglizcha-O'zbekcha
+            </div>
+            <div class="inline" style="width: 90%;">
+                <div class="ui massive form search">
+                    <form  method="GET" action="/" class="ui icon input" style="width: 100%;">
+                        <input name="q" class="prompt" type="text" placeholder="So'zni kiriting..." >
+                        <i class="search link icon"></i>
+                    </form>
+                </div>
+            </div>      
+        </div>
+    
+        <div class="ui piled segment">
+            <h4 class="ui header">Natija</h4>
+            <table class="ui celled large olive table">
+                <thead>
+                    <tr>
+                        <th><i class="united kingdom flag"></i>Inglizcha</th>
+                        <th><i class="uzbekistan flag"></i>O'zbekcha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if natija %}
+                    {% for tarjima in natija %}
+                    <tr>
+                        <td>{{ tarjima.inglizcha }}</td>
+                        <td>{{ tarjima.uzbekcha }}</td>
+                    </tr>
+                    {% endfor %}
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
